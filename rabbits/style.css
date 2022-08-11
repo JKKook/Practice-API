@@ -1,0 +1,27 @@
+body {
+  background-color: ivory;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.rabbitToBtn {
+  position: absolute;
+  background-color: cadetblue;
+  top: 24px;
+  right: 32px;
+  font-size: 20px;
+  border: none;
+  text-decoration: solid;
+  color: white;
+  outline: none;
+}
+
+.aside {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}

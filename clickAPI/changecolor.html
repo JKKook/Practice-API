@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM API</title>
+    <style>
+      .body {
+        box-sizing: border-box;
+      }
+
+      .another {
+        margin-top: 200px;
+      }
+
+      .typeBtnOne {
+        width: 100px;
+        height: 30px;
+        outline: none;
+        border: none;
+        background-color: navy;
+        color: rgb(255, 255, 255);
+      }
+      .typeBtnTwo {
+        width: 100px;
+        height: 30px;
+        outline: none;
+        border: none;
+        background-color: red;
+        color: rgb(255, 255, 255);
+      }
+      .typeBtnThree {
+        width: 100px;
+        height: 30px;
+        outline: none;
+        border: none;
+        background-color: blue;
+        color: rgb(255, 255, 255);
+      }
+      .typeBtnFour {
+        width: 100px;
+        height: 30px;
+        outline: none;
+        border: none;
+        background-color: green;
+        color: rgb(255, 255, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="typeBtnOne">BUTTON1</button>
+    <button class="typeBtnTwo">BUTTON2</button>
+    <section class="another">
+      <div class="anotherType">
+        <p id="paragraph">changeColor</p>
+        <button class="typeBtnThree" onclick="changeColor('blue')">
+          BUTTON3
+        </button>
+        <button class="typeBtnFour" onclick="changeColor('green')">
+          BUTTON4
+        </button>
+      </div>
+    </section>
+  </body>
+  <script>
+    /** # .
+     * Event : addEventListener(click, mouseover)  mouseup , mousedown
+     */
+    const clickBtn = document.querySelector(".typeBtnOne");
+    clickBtn.addEventListener("click", () => {
+      alert("첫 번째, 버튼이 눌렸습니다.");
+    });
+
+    const mouseUpBtn = document.querySelector(".typeBtnTwo");
+    mouseUpBtn.addEventListener("mouseover", () => {
+      alert("동작이 감지 되었습니다.");
+    });
+
+    /*
+     * param : string
+     * Api : getElementById (찾고자 하는 요소의 id를 객체로 반환, * 주어진 id가 없는 경우 변수를 만들어서 지정 가능!)
+     * return : newColor / element가 null값일 때 아무것도 반환하지 않음.
+     */
+    function changeColor(newColor) {
+      let element = document.getElementById("paragraph");
+      if (element === "null") {
+        return;
+      }
+      element.style.color = newColor;
+    }
+  </script>
+</html>
