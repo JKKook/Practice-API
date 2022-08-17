@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./login.css" />
+  </head>
+  <body>
+    <p>Sign in to your account</p>
+    <form action="" method="post">
+      <div class="form__id">
+        <label for="UserID">User ID</label>
+        <input
+          type="text"
+          name="UserID"
+          id="UserID"
+          class="id"
+          minlength="8"
+          maxlength="20"
+          placeholder="please enter your ID"
+        />
+      </div>
+      <div class="form__pwd">
+        <label for="UserPwd">User Pwd</label>
+        <input
+          type="text"
+          name="UserPwd"
+          id="UserPwd"
+          class="pwd"
+          minlength="8"
+          maxlength="20"
+          placeholder="please enter your Password"
+        />
+      </div>
+    </form>
+    <div class="form__login">
+      <label for="Login"></label>
+      <input type="button" value="Login" name="Login" class="login" />
+    </div>
+  </body>
+</html>
