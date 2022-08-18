@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>when clicked, print the TimeStamp</title>
+  </head>
+  <body>
+    <form id="form">
+      <label for="get" id="reset">Reset Test :</label>
+      <input type="text" name="resetBtn" id="reset" />
+      <button class="btn" type="reset">reset</button>
+    </form>
+    <p id="log">log</p>
+  </body>
+  <script>
+    // 갱신 되는 부분 해결 못 함
+    function logReset(e) {
+      if (e === null) {
+        return;
+      } else log.innerText = `Time stamp : ${date.toLocaleString()}`;
+      date.focus();
+    }
+    const date = new Date();
+    date.toDateString();
+    const form = document.getElementById("form");
+    const p = document.getElementById("log");
+    form.addEventListener("reset", (e) => {
+      logReset();
+    });
+  </script>
+</html>
