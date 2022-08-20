@@ -1,5 +1,5 @@
 {
-  function count(type: string): string {
+  function count(type: number | string): number {
     // 결과를 표시할 element
     const resultElement = document.getElementById("result");
 

@@ -9,8 +9,8 @@
   </head>
   <body>
     <p>Sign in to your account</p>
-    <form action="" method="post">
-      <div class="form__id">
+    <div class="form__id">
+        <form class="form">
         <label for="UserID">User ID</label>
         <input
           type="text"
@@ -34,10 +34,12 @@
           placeholder="please enter your Password"
         />
       </div>
+      <div class="form__login">
+        <label for="Login"></label>
+        <input type="submit" value="Login" name="Login" class="login" />
+      </div>
     </form>
-    <div class="form__login">
-      <label for="Login"></label>
-      <input type="button" value="Login" name="Login" class="login" />
-    </div>
+    <div class="logins"></div>
+    <script src="./login.js" defer></script>
   </body>
 </html>
