@@ -3,6 +3,7 @@ const $form = document.querySelector(".form");
 const $formInputID = document.querySelector("#UserID");
 const $formInputPWD = document.querySelector("#UserPwd");
 const loginURL = "http://localhost:3000/Login";
+
 const rederAllLogins = (logins) => {
   // $logins 초기화 (애초에 포함 값은 없지만)
   $logins.innerHTML = "";
@@ -18,16 +19,16 @@ const createLoginItem = (item) => {
   const { number, id, pwd } = item;
   const loginItem = document.createElement("div");
   loginItem.classList.add("item");
-  loginItem.dataset.number = number;
+  loginItem.dataset.number = id;
   loginItem.innerHTML = `
-  <div class="content"> 
   <style>
- input[value] {
+  input[value] {
     font-size : 12px;
     background-color : lightpink;
     border : none;
- }
+  }
   </style>
+  <div class="content"> 
   <input value="${id}" class="id"> 
   <input value="${pwd}"class="pwd">
   </div>`;
