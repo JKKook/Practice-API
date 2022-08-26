@@ -10,7 +10,7 @@ json = JSON.stringify(["apple", "banana"]);
 console.log(json);
 
 const rabbit = {
-  name: " tori",
+  name: "tori",
   color: "white",
   birthDate: new Date(),
 
